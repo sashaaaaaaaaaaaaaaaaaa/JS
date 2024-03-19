@@ -5,12 +5,18 @@ rl.on('close', () => process.exit(0));
 
 async function execute() {
     // Euer Code kommt hier hinein
-    const pass = 'drinkwooah'
-    const password = await prompt("Please enter your password: ");
-    if (password === pass){
-        console.log("YE")
-    }else {
-        console.log("NOOO")
+
+    const num = await prompt("INPUT NUMBER :");
+
+    if (num >= '0' && num <= '9') {
+        if (num % 2 == 0) {
+            console.log("ITS EVEN")
+        } else if (num % 2 ==! 0) {
+            console.log("ITS ODD")
+        } else if (num === num) {
+            console.log("DECIMAL NUM")
+
+        }
     }
 
     // Ende von eurem Code
