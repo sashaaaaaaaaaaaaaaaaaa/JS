@@ -8,7 +8,7 @@ async function execute() {
 
 
     const temp = await prompt("How cold is it: ");
-    if (temp < 0) {
+    if (temp <= 0) {
         console.log("COLD")
     } else if (temp > 0 && temp < 20) {
         console.log("COMFY")
