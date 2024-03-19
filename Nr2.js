@@ -5,14 +5,16 @@ rl.on('close', () => process.exit(0));
 
 async function execute() {
     // Euer Code kommt hier hinein
-    const pass = 'drinkwooah'
-    const password = await prompt("Please enter your password: ");
-    if (password === pass){
-        console.log("YE")
-    }else {
-        console.log("NOOO")
-    }
 
+
+    const temp = await prompt("How cold is it: ");
+    if (temp < 0) {
+        console.log("COLD")
+    } else if (temp > 0 && temp < 20) {
+        console.log("COMFY")
+    } else {
+        console.log("HOT")
+    }
     // Ende von eurem Code
 }
 execute().catch((err) => { console.error(err); }).finally(() => rl.close());
