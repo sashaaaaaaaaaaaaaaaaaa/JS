@@ -11,9 +11,9 @@ async function execute() {
     const n3 = await prompt("INPUT NUMBER :");
     const n4 = await prompt("INPUT NUMBER :");
 
-   const temp1 = n1 > n2 ? n1 :n2;
-   const temp2 = temp1 > n3 ? temp1 : n3;
-   const temp3 = temp2 > n4 ? temp2 : n4;
+   const temp1 = Number(n1) >= Number(n2)? n1 :n2;
+   const temp2 = temp1 >= Number(n3)? temp1 : n3;
+   const temp3 = temp2 >= Number(n4) ? temp2 : n4;
    console.log(temp3)
 
 

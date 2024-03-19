@@ -28,6 +28,8 @@ async function execute() {
             break;
         case  '7':
             console.log("SUNDAY")
+        default:
+            console.log("NONE")
     }
 
 
