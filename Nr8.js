@@ -11,7 +11,7 @@ async function execute() {
     if (num >= '0' && num <= '9') {
         if (num % 2 == 0) {
             console.log("ITS EVEN")
-        } else if (num % 2 == !0) {
+        } else if (num % 2 ==! 0) {
             console.log("ITS ODD")
         } else if (num === num) {
             console.log("DECIMAL NUM")
