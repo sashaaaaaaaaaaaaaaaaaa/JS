@@ -3,6 +3,7 @@
 
 ### Node ###
 # Logs
+.ArraysObjecte
 logs
 *.log
 npm-debug.log*
