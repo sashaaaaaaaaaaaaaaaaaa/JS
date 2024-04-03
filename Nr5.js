@@ -4,60 +4,64 @@ const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
 rl.on('close', () => process.exit(0));
 
 async function execute() {
-    // Euer Code kommt hier hinein
+    // Variant 1
+    let check;
+    let input;
+    do {
+        input = await prompt("INPUT A LETTER :");
+        input = input.toLowerCase();
+        check = input > 'a' && input < 'z';
+    } while (!check);
 
-    const input = await prompt("INPUT A LETTER :");
+    switch (input) {
+        case 'u':
+        case 'a':
+        case 'e':
+        case 'i' :
+        case 'o' :
+            console.log("VOWEL");
+            break;
+        default:
+            console.log("CONSONANT");
+    }
 
-        switch (input) {
-            case 'U':
-                console.log("VOWEL")
-                break;
-            case 'A':
-                console.log("VOWEL")
-                break;
-            case 'E':
-                console.log("VOWEL")
-                break;
-            case 'I' :
-                console.log("VOWEL")
-                break;
-            case 'O' :
-                console.log("VOWEL")
-                break;
-            case 'U':
-                console.log("VOWEL")
-                break;
+    // Variant 2 (Longer version)
+    const userInput = await prompt("INPUT A LETTER :");
+
+
+        switch (userInput.toLowerCase()) {
+            case 'u':
             case 'a':
-                console.log("VOWEL")
-                break;
             case 'e':
-                console.log("VOWEL")
-                break;
             case 'i' :
-                console.log("VOWEL")
-                break;
             case 'o' :
-                console.log("VOWEL")
+                console.log("VOWEL");
                 break;
-            default :
-                console.log("CONSONANT")
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+                console.log("CONSONANT");
+                break;
+            default:
+                console.log("INVALID");
         }
 }
-    //
-    //     if (input === 'A'||input === 'E'|| input === 'I'|| input === 'O'|| input ==='U') {
-    //         console.log("VOWEL")
-    //     } else {
-    //         console.log("CONSONANT")
-    //     }
-    // }
-    //
-    // if (input >= 'a' && input <= 'z') {
-    //     if (input === 'a'||input === 'e'|| input === 'i'|| input === 'o'|| input ==='u') {
-    //         console.log("VOWEL")
-    //     } else {
-    //         console.log("CONSONANT")
-    //     }
-    // }
-    // Ende von eurem Code
-
 execute().catch((err) => { console.error(err); }).finally(() => rl.close());

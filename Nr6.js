@@ -6,8 +6,8 @@ rl.on('close', () => process.exit(0));
 async function execute() {
     // Euer Code kommt hier hinein
 
-    const number1 = await prompt("INPUT NUMBER :");
-    const number2 = await prompt("INPUT NUMBER :");
+    const number1 = parseInt(await prompt("INPUT NUMBER :"));
+    const number2 = parseInt(await prompt("INPUT NUMBER :"));
     const operator = await prompt("INPUT OPERATOR :");
 
 
