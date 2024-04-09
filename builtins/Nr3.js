@@ -7,6 +7,7 @@ async function execute() {
     // Euer Code kommt hier hinein
 
 
+
     // Ende von eurem Code
 }
 execute().catch((err) => { console.error(err); }).finally(() => rl.close());

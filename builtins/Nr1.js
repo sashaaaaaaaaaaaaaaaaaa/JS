@@ -1,12 +1,12 @@
-const readline = require('readline');
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
-rl.on('close', () => process.exit(0));
+const currentDate = new Date();
+const day = currentDate.getDate();
+const month = currentDate.getMonth() + 1; // Add 1 as months are zero-based
+const year = currentDate.getFullYear();
+const hours = currentDate.getHours();
+const minutes = currentDate.getMinutes();
+const seconds = currentDate.getSeconds();
+const miliseconds =currentDate.getMilliseconds();
 
-async function execute() {
-    // Euer Code kommt hier hinein
+console.log(`Today's date and time is ${day}-${month}-${year} ${hours}:${minutes}:${seconds}:${miliseconds}`);
 
 
-    // Ende von eurem Code
-}
-execute().catch((err) => { console.error(err); }).finally(() => rl.close());
