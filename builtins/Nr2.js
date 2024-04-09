@@ -1,12 +1,9 @@
-const readline = require('readline');
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
-rl.on('close', () => process.exit(0));
-
-async function execute() {
-    // Euer Code kommt hier hinein
-
-
-    // Ende von eurem Code
+function getRandom(min, max, decimal = true) {
+    if (decimal === false) {
+        return Math.random() * (max - min) + min;
+    } else {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
 }
-execute().catch((err) => { console.error(err); }).finally(() => rl.close());
+
+console.log(getRandom(1, 10, false));
