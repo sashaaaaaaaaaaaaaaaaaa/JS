@@ -39,7 +39,6 @@ async function execute() {
             case 'd':
                 if (urow + 1 === 7) {
                     urow = 6;
-                    ucol = ucol;
                     break;
                 } else if (maze[urow + 1][ucol] === "#") {
                     break;
